@@ -1,0 +1,222 @@
+<html>
+<head>
+<title>main.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000;}
+.s1 { color: #008000; font-weight: bold;}
+.s2 { color: #000080; font-weight: bold;}
+.s3 { color: #808080; font-style: italic;}
+.s4 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.dart</font>
+</center></td></tr></table>
+<pre>import  <span class="s1">'package:flutter/material.dart'</span>;
+import <span class="s1">&quot;colleges.dart&quot;</span>;
+
+
+<span class="s2">void </span>main() =&gt; runApp(MyApp());
+
+<span class="s2">class </span>MyApp <span class="s2">extends </span>StatelessWidget{
+<span class="s3">//Mahdia Jebin</span>
+//Mahdia Jebin
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">//TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      title:<span class="s1">'Colleges '</span>,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: <span class="s2">new </span>MyHomePage(),<span class="s3">//Mahdia Jebin</span>
+    );
+  }
+}
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>MyHomePage <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    <span class="s3">//TODO: implement build</span>
+    <span class="s2">return </span>Scaffold(
+      appBar: AppBar(title: Text(<span class="s1">'Colleges'</span>) ,
+      ),
+      body: Center(
+          child:Row(<span class="s3">//Mahdia Jebin</span>
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: &lt;Widget&gt;[
+              <span class="s2">new </span>Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: &lt;Widget&gt;[
+
+                  <span class="s3">//AA alpha -transperency put FF</span>
+                  //AARRGGBB
+
+                  CollegeButton(collegename:<span class="s1">'CUNY'</span>,
+                    collegewidget: Cuny(),
+                    color1:Color.fromRGBO(<span class="s4">65</span>, <span class="s4">105</span>,<span class="s4">225</span>,<span class="s4">16</span>),
+                    color2:Color.fromRGBO(<span class="s4">255</span>,<span class="s4">255</span>, <span class="s4">255</span>,<span class="s4">16</span>),
+
+                  ),
+
+                  CollegeButton(collegename:<span class="s1">'NYU'</span>,
+                    collegewidget: Nyu(),
+                    color1:Color.fromRGBO(<span class="s4">138</span>,<span class="s4">43</span>,<span class="s4">226</span>,<span class="s4">16</span>),
+                    color2:Color.fromRGBO(<span class="s4">255</span>,<span class="s4">255</span>, <span class="s4">255</span>,<span class="s4">16</span>),
+                  ),
+
+                  CollegeButton(collegename:<span class="s1">'AU'</span>,
+                    collegewidget: Au(),
+                    color1:Color.fromRGBO(<span class="s4">0</span>,<span class="s4">0</span>,<span class="s4">205</span>,<span class="s4">16</span>),
+                    color2:Color.fromRGBO(<span class="s4">255</span>,<span class="s4">255</span>, <span class="s4">255</span>,<span class="s4">16</span>),
+                  ),
+
+
+                  CollegeButton(collegename:<span class="s1">'HU'</span>,
+                    collegewidget: Hu(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFFA41034</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFFFFFFFF</span>),
+                  ),
+
+                  CollegeButton(collegename:<span class="s1">'SU'</span>,
+                    collegewidget: Su(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFF8C1515</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFF007662</span>),
+                  ),
+
+
+                ],
+              ),
+<span class="s3">//Mahdia Jebin</span>
+              <span class="s2">new </span>Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: &lt;Widget&gt;[
+
+
+                  CollegeButton(collegename:<span class="s1">'WSU'</span>,
+                    collegewidget: Wsu(),
+                    color1:Color.fromRGBO(<span class="s4">255</span>, <span class="s4">215</span>, <span class="s4">0</span>,<span class="s4">16</span>),
+                    color2: Colors.black,
+                  ),
+
+
+                  CollegeButton(collegename:<span class="s1">'OU'</span>,
+                    collegewidget: Ou(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFFFDF9D8</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFF841617</span>),
+                  ),
+
+                  CollegeButton(collegename:<span class="s1">'MIT'</span>,
+                    collegewidget: Mit(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFF000000</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFFA31F34</span>),
+                  ),
+
+
+                  CollegeButton(collegename:<span class="s1">'MSU'</span>,
+                    collegewidget: Msu(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFF18453B</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFFFFFFFF</span>),
+                  ),
+
+
+                  CollegeButton(collegename:<span class="s1">'OPSU'</span>,
+                    collegewidget: Opsu(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFFFF0000</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFF0F00F1</span>),
+                  ),
+
+
+                ],
+              ),
+<span class="s3">//Mahdia Jebin</span>
+              <span class="s2">new </span>Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+
+                children: &lt;Widget&gt;[
+                  CollegeButton(collegename:<span class="s1">'UTULSA'</span>,
+                    collegewidget: Utulsa(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFF002D72</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFFC5B783</span>),
+
+                  ),
+
+                  CollegeButton(collegename:<span class="s1">'ISU'</span>,
+                    collegewidget: Isu(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFFCE1126</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFFF9DD16</span>),
+                  ),
+
+                  CollegeButton(collegename:<span class="s1">'RICE'</span>,
+                    collegewidget: Rice(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFF00205B</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFFC1C6C8</span>),
+                  ),
+<span class="s3">//Mahdia Jebin</span>
+
+                  CollegeButton(collegename:<span class="s1">'KU'</span>,
+                    collegewidget: Ku(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFF0051BA</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFFE8000D</span>),
+                  ),
+<span class="s3">//Mahdia Jebin</span>
+                  CollegeButton(collegename:<span class="s1">'DUKE'</span>,
+                    collegewidget: Duke(),
+                    color1: <span class="s2">const </span>Color(<span class="s4">0xFF004E9C</span>),
+                    color2: <span class="s2">const </span>Color(<span class="s4">0xFFFFFFFF</span>),
+                  ),
+
+
+                ],
+              ),
+<span class="s3">//Mahdia Jebin</span>
+            ],
+
+          )<span class="s3">//Mahdia Jebin</span>
+//Mahdia Jebin
+
+
+
+
+      ),
+    );
+  }
+}
+
+<span class="s2">class </span>CollegeButton <span class="s2">extends </span>StatelessWidget {
+  <span class="s2">final </span>String collegename;
+  <span class="s2">final </span>Widget collegewidget;
+  <span class="s2">final </span>Color color1;
+  <span class="s2">final </span>Color color2;
+
+  CollegeButton({<span class="s2">this</span>.collegename, <span class="s2">this</span>.collegewidget, <span class="s2">this</span>.color1 = Colors
+      .lightBlue, <span class="s2">this</span>.color2 = Colors.red});
+
+<span class="s3">//Mahdia Jebin</span>
+  @override
+  Widget build(BuildContext context) {
+    <span class="s2">return </span>SizedBox(
+        width: <span class="s4">105.0</span>,
+        height: <span class="s4">40.0</span>,
+        child: FlatButton(
+          color: color1,
+          child: Container( <span class="s3">//Mahdia Jebin</span>
+              padding: EdgeInsets.all(<span class="s4">10</span>),
+              child: Text(collegename,
+                style: TextStyle(color: color2),)),
+          onPressed: () =&gt;
+              Navigator.push(context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) =&gt; collegewidget)),
+        ));
+  }
+}</pre>
+</body>
+</html>

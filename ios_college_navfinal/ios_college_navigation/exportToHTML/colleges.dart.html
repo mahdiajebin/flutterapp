@@ -1,0 +1,275 @@
+<html>
+<head>
+<title>colleges.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000;}
+.s1 { color: #008000; font-weight: bold;}
+.s2 { color: #000080; font-weight: bold;}
+.s3 { color: #808080; font-style: italic;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+colleges.dart</font>
+</center></td></tr></table>
+<pre>import <span class="s1">'package:flutter/material.dart'</span>;
+import <span class="s1">'package:ios_college_navigation/cities.dart'</span>;
+
+<span class="s2">class </span>College <span class="s2">extends </span>StatelessWidget{
+  <span class="s2">final </span>String collegename;
+  <span class="s2">final </span>String collegetext;
+  <span class="s2">final </span>String cityname;
+  <span class="s2">final </span>String collegelogo;
+  <span class="s2">final </span>Widget citywidget;
+  <span class="s2">final </span>Color color1;
+
+  College ({<span class="s2">this</span>.collegename, <span class="s2">this</span>.collegetext, <span class="s2">this</span>.cityname, <span class="s2">this</span>.collegelogo, <span class="s2">this</span>.citywidget, <span class="s2">this</span>.color1});
+<span class="s3">//mahdia</span>
+  @override
+  Widget build(BuildContext context) {
+<span class="s3">//mahdia jebin</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text(collegename),),
+
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.amber,
+              child: Text(<span class="s1">&quot;Go Back&quot;</span>),
+              onPressed: () =&gt;Navigator.pop(context) ,
+            ),
+            Text(collegetext),
+            Image.asset(collegelogo),
+            FlatButton( <span class="s3">//Mahdia Jebin</span>
+                color: Colors.lightBlue,
+                child: Text(cityname),
+                onPressed: ()=&gt;Navigator.push(context,
+                    MaterialPageRoute(builder: (BuildContext context)=&gt;citywidget )
+                )
+            )
+          ],
+        ),
+      ),
+
+    );
+  }
+}
+
+<span class="s2">class </span>Cuny <span class="s2">extends </span>College{
+  Cuny()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'City University Of New York'</span>,
+    collegetext: <span class="s1">'Tuition cost aroound Depends on the College,'</span>
+        'its located in New York City',
+    cityname:<span class="s1">'City Of New York'</span>,
+    collegelogo:<span class="s1">'lib/assets/cuny.png'</span>,
+    citywidget: Newyorkcity(),
+
+  );
+}
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Nyu <span class="s2">extends </span>College{
+  Nyu()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'New York University'</span>,
+    collegetext: <span class="s1">'Tuition cost aroound 51000 a year for nursing program, its located in New York State'</span>
+        'its located in New York State',
+    cityname:<span class="s1">'City Of New York'</span>,
+    collegelogo:<span class="s1">'lib/assets/nyu.png'</span>,
+    citywidget: Newyorkcity(),
+
+  );
+}
+
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Au <span class="s2">extends </span>College{
+  Au()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'American University'</span>,
+    collegetext: <span class="s1">'Tuition cost aroound 15000 a year for nursing program,'</span>
+        'its located in Washington',
+    cityname:<span class="s1">'City Of Ward Circle'</span>,
+    collegelogo:<span class="s1">'lib/assets/au.png'</span>,
+    citywidget: Wardcircle(),
+
+  );
+}
+
+<span class="s3">//Mahdia Jebin</span>
+
+<span class="s2">class </span>Hu <span class="s2">extends </span>College{
+  Hu()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'Harvard University'</span>,
+    collegetext: <span class="s1">'Harvard University is a private Ivy League research university in Cambridge,'</span>
+        ' Massachusetts, with about 6,700 undergraduate students and about 15,250 postgraduate students.',
+    cityname:<span class="s1">'City Of Cambridge'</span>,
+    collegelogo:<span class="s1">'lib/assets/hu.png'</span>,
+    citywidget: cambridge(),
+
+  );
+}
+
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Su <span class="s2">extends </span>College{
+  Su()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'Standford University'</span>,
+    collegetext: <span class="s1">'Tuition cost aroound 150000 a year for nursing program,'</span>
+        'its located in the state',
+    cityname:<span class="s1">'Santa Clara County'</span>,
+    collegelogo:<span class="s1">'lib/assets/su.png'</span>,
+    citywidget: SantaClaraCounty(),
+
+  );
+}
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Wsu <span class="s2">extends </span>College{
+  Wsu()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'Wichita State University'</span>,
+    collegetext: <span class="s1">'Tuition cost aroound 150000 a year for nursing program,'</span>
+        'its located in wichita state',
+    cityname:<span class="s1">'City Of Wichita'</span>,
+    collegelogo:<span class="s1">'lib/assets/wichita.PNG'</span>,
+    citywidget: Wichita(),
+
+  );
+}
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Ou <span class="s2">extends </span>College{
+  Ou()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'Oklahoma State University'</span>,
+    collegetext: (<span class="s1">'The University of Oklahoma is a public research university in Norman, Oklahoma.'</span>
+        ' Founded in 1890, it had existed in Oklahoma '
+        'Territory near Indian Territory for 17 years before the two became the state of Oklahoma.'),
+    cityname:<span class="s1">'City Of Norman'</span>,
+    collegelogo:<span class="s1">'lib/assets/ou.jpg'</span>,
+    citywidget: Norman(),
+
+  );
+}
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Mit <span class="s2">extends </span>College{
+  Mit()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'Massachusetts Institute of Technology'</span>,
+    collegetext: (<span class="s1">'Tuition cost aroound 48000 a year for Compuetr Science program,'</span>
+        'its located in wichita state'),
+    cityname:<span class="s1">'City Of Cambridge'</span>,
+    collegelogo:<span class="s1">'lib/assets/mit.jpg'</span>,
+    citywidget: cambridge(),
+
+  );
+}
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Msu <span class="s2">extends </span>College{
+  Msu()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'Michigan State University'</span>,
+    collegetext: (<span class="s1">'The University of Michigan, often simply referred to as Michigan,'</span>
+        ' is a public research university in Ann Arbor, Michigan. The university '
+        'is Michigans oldest; it was founded in 1817 in Detroit,'
+        ' as the Catholepistemiad, or University of Michigania, 20 years before the territory became a state.'
+        'tuition 15k after aid'),
+    cityname:<span class="s1">'City Of AnnArbor'</span>,
+    collegelogo:<span class="s1">'lib/assets/msu.png'</span>,
+    citywidget: AnnArbor(),
+
+  );
+}
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Opsu <span class="s2">extends </span>College{
+  Opsu()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'Oklahoma Panhandle State University'</span>,
+    collegetext: (<span class="s1">'Oklahoma Panhandle State University is a university in Goodwell, '</span>
+        'Oklahoma. OPSU is a baccalaureate degree-granting institution. '),
+    cityname:<span class="s1">'City Of Goodwell'</span>,
+    collegelogo:<span class="s1">'lib/assets/opsu.png'</span>,
+    citywidget: Goodwell(),
+
+  );
+}
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Utulsa <span class="s2">extends </span>College{
+  Utulsa()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'The University of Tulsa'</span>,
+    collegetext:(<span class="s1">'The University of Tulsa is a private research '</span>
+        'university located in Tulsa, Oklahoma, United States. The University of Tulsa '
+        'is renowned for its undergraduate, graduate and professional programs across a number of disciplines, '
+        'including law, literature, computer science, natural sciences, psychology, and engineering '),
+    cityname:<span class="s1">'City Of Tulsa'</span>,
+    collegelogo:<span class="s1">'lib/assets/utulsa.PNG'</span>,
+    citywidget: Tulsa(),
+
+  );
+}
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Isu <span class="s2">extends </span>College{
+  Isu()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'Illinois State University'</span>,
+    collegetext:(<span class="s1">'Illinois State University is a public university in Normal, Illinois. Founded in 1857 as '</span>
+        'Illinois State Normal University, it is the oldest public university in Illinois.  '),
+    cityname:<span class="s1">'City Of Normal'</span>,
+    collegelogo:<span class="s1">'lib/assets/isu.png'</span>,
+    citywidget: Normal(),
+
+  );
+}
+<span class="s3">//Mahdia Jebin</span>
+
+<span class="s2">class </span>Rice <span class="s2">extends </span>College{
+  Rice()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'Rice University'</span>,
+    collegetext:(<span class="s1">'William Marsh Rice University, commonly known as Rice University, is a private '</span>
+        'research university located on a 300-acre campus in Houston, Texas, United States. '
+        'The university is situated near the Houston Museum District and is adjacent '
+        'to the Texas Medical Center. '),
+    cityname:<span class="s1">'City Of Houston'</span>,
+    collegelogo:<span class="s1">'lib/assets/rice.png'</span>,
+    citywidget: Houston(),
+
+  );
+}
+<span class="s3">//Mahdia Jebin</span>
+<span class="s2">class </span>Ku <span class="s2">extends </span>College{
+  Ku()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'University of Kansas'</span>,
+    collegetext:(<span class="s1">'The University of Kansas, also referred to as KU, is a public '</span>
+        'research university with its main campus in Lawrence, Kansas, and several satellite campuses,'
+        ' research and educational centers, medical centers, and classes across the state of Kansas'),
+    cityname:<span class="s1">'City Of Lawrence'</span>,
+    collegelogo:<span class="s1">'lib/assets/ku.png'</span>,
+    citywidget: Citylawrence(),
+
+  );
+}
+<span class="s3">//mahdia</span>
+<span class="s2">class </span>Duke <span class="s2">extends </span>College{
+  Duke()
+      :<span class="s2">super</span>(
+    collegename: <span class="s1">'Duke University'</span>,
+    collegetext:(<span class="s1">'Duke University is a private research university in Durham, North Carolina. Founded by Methodists '</span>
+        'and Quakers in the present-day town of Trinity in 1838, the school moved to Durham in 1892. '),
+    cityname:<span class="s1">'City Of Durham'</span>,
+    collegelogo:<span class="s1">'lib/assets/duke.png'</span>,
+    citywidget: Durham(),
+
+  );
+}
+
+<span class="s3">//Mahdia Jebin</span>
+
+</pre>
+</body>
+</html>

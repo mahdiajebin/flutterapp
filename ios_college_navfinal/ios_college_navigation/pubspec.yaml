@@ -1,0 +1,110 @@
+name: ios_college_navigation
+description: A new Flutter application.
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# Read more about versioning at semver.org.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://www.dartlang.org/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+     - lib/assets/cuny.png
+     - lib/assets/nyu.png
+     - lib/assets/au.png
+     - lib/assets/hu.png
+     - lib/assets/su.png
+     - lib/assets/wichita.PNG
+     - lib/assets/ou.jpg
+     - lib/assets/mit.jpg
+     - lib/assets/msu.png
+     - lib/assets/opsu.png
+     - lib/assets/utulsa.png
+     - lib/assets/isu.png
+     - lib/assets/rice.png
+     - lib/assets/ku.png
+     - lib/assets/duke.png
+     - lib/assets/cities/nyc.jpg
+     - lib/assets/cities/washingtoncity.png
+     - lib/assets/cities/wichita.jpg
+     - lib/assets/cities/lawrence.jpg
+     - lib/assets/cities/cambridge.jpg
+     - lib/assets/cities/SantaClaraCounty.jpg
+     - lib/assets/cities/norman.jpg
+     - lib/assets/cities/annarbor.jpg
+     - lib/assets/cities/goodwell.jpg
+     - lib/assets/cities/tulsa.jpg
+     - lib/assets/cities/normal.jpg
+     - lib/assets/cities/houston.jpg
+     - lib/assets/cities/durham.jpg
+     - lib/assets/state/newyork.png
+     - lib/assets/state/washington.jpg
+     - lib/assets/state/california.PNG
+     - lib/assets/state/boston.jpg
+     - lib/assets/state/kansas.jpg
+     - lib/assets/state/oklahoma.jpg
+     - lib/assets/state/texas.jpg
+     - lib/assets/state/massachusetts.jpg
+     - lib/assets/state/michigan.png
+     - lib/assets/state/illinois.png
+     - lib/assets/state/NorthCarolina.png
+
+
+
+
+  #  - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.io/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.io/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.io/custom-fonts/#from-packages

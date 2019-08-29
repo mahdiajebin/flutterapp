@@ -1,0 +1,533 @@
+<html>
+<head>
+<title>cities.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000000;}
+.s1 { color: #008000; font-weight: bold;}
+.s2 { color: #000080; font-weight: bold;}
+.s3 { color: #808080; font-style: italic;}
+.s4 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+cities.dart</font>
+</center></td></tr></table>
+<pre>import <span class="s1">'package:flutter/material.dart'</span>;
+import <span class="s1">'state.dart'</span>;
+
+<span class="s2">class </span>Wichita <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;City Of Wichita&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'Wichita is a city in south-central Kansas. Exploration Place features hands-on science exhibits and Kansas in Miniature, a display of animated models depicting 1950s Kansas.'</span>
+                ' Old Cowtown Museum recreates 19th-century life with old buildings and costumed guides. '),
+
+            Image.asset(<span class="s1">&quot;lib/assets/cities/wichita.jpg&quot;</span>),
+
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State of Kansas'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt; Kansas())),
+            ),
+
+
+
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+
+
+
+
+<span class="s2">class </span>Newyorkcity <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;City Of New York&quot;</span>),
+        ),<span class="s3">//Mahdia Jebin</span>
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(<span class="s3">//Mahdia Jebin</span>
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'New York City comprises 5 boroughs sitting where the Hudson River '</span>
+                'meets the Atlantic Ocean. At its core is Manhattan, a densely populated'
+                ' borough that’s among the world’s major commercial, financial and cultural'
+                ' centers. '),
+
+            Image.asset(<span class="s1">&quot;lib/assets/cities/nyc.jpg&quot;</span>),
+
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of New York'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt; Newyorkstate())),
+            ),
+
+<span class="s3">//Mahdia Jebin</span>
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+<span class="s2">class </span>Citylawrence <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;City of Lawrence&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'This city plays such a strong part in the lives of KU students that it becomes a second '</span>
+                'home — one they return to for decades to come as alumni. To understand it,'
+                ' you really have to see it for yourself. '),
+            Image.asset(<span class="s1">&quot;lib/assets/cities/lawrence.jpg&quot;</span>),
+
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of Kansas'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt; Kansas())),
+            ),
+
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+<span class="s2">class </span>Wardcircle <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;Ward Circle&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'Washington, DC, the U.S. capital, is a compact city'</span>
+                ' on the Potomac River, bordering the states of Maryland'
+                ' and Virginia. It’s defined by imposing neoclassical '
+                'monuments and buildings – including '
+                'the iconic ones that house the federal government’s'
+                ' 3 branches: the Capitol, White House and Supreme Court.  '),
+
+            Image.asset(<span class="s1">&quot;lib/assets/cities/washingtoncity.png&quot;</span>),
+
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of Washington'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt; Washingtonstate())),
+            ),
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+
+<span class="s2">class </span>cambridge <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;city of Cambridge&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'Cambridge is a city in Massachusetts, '</span>
+                'across the Charles River from Boston. It’s home to Harvard University. '
+                'At the heart of campus, grassy Harvard Yard is anchored by the neoclassical Widener Library. '
+                'Harvard Square has cafes, bars and bookstores. The Harvard Art Museums comprise the Fogg, Busch-Reisinger '
+                'and Arthur M.'
+                ' Sackler collections. Southeast is the prestigious Massachusetts Institute of Technology (MIT). '),
+
+            Image.asset(<span class="s1">&quot;lib/assets/cities/cambridge.jpg&quot;</span>),
+
+
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of Massachusetts'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt;Massachusettsstate())),
+            ),
+
+
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+<span class="s3">//su</span>
+<span class="s2">class </span>SantaClaraCounty <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;city of Santa Clara County&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'Santa Clara County, officially the County of Santa Clara, is Californias 6th most populous'</span>
+                'county, with a population of 1,781,642, as of the 2010 census. '),
+
+            Image.asset(<span class="s1">&quot;lib/assets/cities/SantaClaraCounty.jpg&quot;</span>),
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of California'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt;Californiastate())),
+            ),
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+
+<span class="s2">class </span>Norman <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;City Of Norman&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'Norman is a city in the U.S. state of Oklahoma located 20 miles south of downtown Oklahoma City.  '</span>),
+
+            Image.asset(<span class="s1">&quot;lib/assets/cities/norman.jpg&quot;</span>),
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of Oklahoma'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt;Oklahomastate())),
+            ),
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+<span class="s2">class </span>AnnArbor <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;city of Ann Arbor&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">' Ann Arbor is a city west of Detroit, in the Midwestern state of Michigan. '</span>
+                'It’s home to the sprawling University of Michigan, known for its research programs.  '),
+            Image.asset(<span class="s1">&quot;lib/assets/cities/annarbor.jpg&quot;</span>),
+
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of Michigan'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt;Michiganstate())),
+            ),
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+
+<span class="s2">class </span>Goodwell <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;city of Goodwell&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'Goodwell is a town in Texas County, Oklahoma, United States. '</span>
+                'The population was 1,293 at the 2010 census. Goodwell is home of Oklahoma Panhandle State  '),
+            Image.asset(<span class="s1">&quot;lib/assets/cities/goodwell.jpg&quot;</span>),
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of Oklahoma'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt;Oklahomastate())),
+            ),
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+
+<span class="s2">class </span>Tulsa <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;City Of Tulsa&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'Tulsa is a city on the Arkansas River, in the U.S. state of Oklahoma. '</span>
+                'It’s known for its art deco architecture, mostly in the central Deco District. '),
+            Image.asset(<span class="s1">&quot;lib/assets/cities/tulsa.jpg&quot;</span>),
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of Oklahoma'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt;Oklahomastate())),
+            ),
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+
+
+<span class="s2">class </span>Normal <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;City Of Normal&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'Normal is a town in McLean County, Illinois, United States.'</span>),
+            Image.asset(<span class="s1">&quot;lib/assets/cities/normal.jpg&quot;</span>),
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of Illinois'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt;Illinoisstate())),
+            ),
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+<span class="s2">class </span>Houston <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;City Of Houston&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'Houston is a large metropolis in Texas, extending to Galveston Bay. It’s closely linked'</span>
+                ' with the Space Center Houston,'
+                ' the coastal visitor center at NASA’s astronaut training and flight control complex. '),
+
+            Image.asset(<span class="s1">&quot;lib/assets/cities/houston.jpg&quot;</span>),
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of Texas'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt;Texasstate())),
+            ),
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+<span class="s3">//DUKE</span>
+<span class="s2">class </span>Durham <span class="s2">extends </span>StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    <span class="s3">// TODO: implement build</span>
+    <span class="s2">return </span>MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(<span class="s1">&quot;City of Durham&quot;</span>),
+        ),
+        body: Column(
+          children: &lt;Widget&gt;[
+            FlatButton(
+              color: Colors.lightBlue,
+              child: Text(<span class="s1">'Go Back'</span>),
+              onPressed: ()=&gt; Navigator.pop(context),
+            ),
+            Text(<span class="s1">'DescriptionDurham is a city in North Carolina. Its part of the Research Triangle Region,'</span>
+                'known for its technology companies and scholarly institutions.  '),
+            Image.asset(<span class="s1">&quot;lib/assets/cities/durham.jpg&quot;</span>),
+
+            FlatButton
+              (color: Colors.pink,
+              child: Container( padding: EdgeInsets.all(<span class="s4">10</span>),
+                  child:Text(<span class="s1">'State Of North Carolina'</span>)),
+              onPressed: () =&gt; Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) =&gt;Ncarolinastate())),
+            ),
+
+          ],
+        ),
+      ),
+    );
+
+  }
+}
+
+<span class="s3">//Mahdia Jebin</span>
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+</body>
+</html>
